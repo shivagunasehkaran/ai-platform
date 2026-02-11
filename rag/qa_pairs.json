@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Who is Mr. Darcy?",
+    "expected_source": "pride_prejudice.txt",
+    "expected_keywords": ["Darcy", "Pemberley", "proud", "wealthy"]
+  },
+  {
+    "question": "Who is Elizabeth Bennet?",
+    "expected_source": "pride_prejudice.txt",
+    "expected_keywords": ["Elizabeth", "Lizzy", "Bennet"]
+  },
+  {
+    "question": "Who is Clarissa Harlowe?",
+    "expected_source": "clarissa.txt",
+    "expected_keywords": ["Clarissa", "Harlowe", "virtue"]
+  },
+  {
+    "question": "Who is Anna Karenina?",
+    "expected_source": "anna_karenina.txt",
+    "expected_keywords": ["Anna", "Karenina", "Vronsky"]
+  },
+  {
+    "question": "Who is Count Vronsky?",
+    "expected_source": "anna_karenina.txt",
+    "expected_keywords": ["Vronsky", "Anna", "officer"]
+  },
+  {
+    "question": "Who is Captain Ahab?",
+    "expected_source": "moby_dick.txt",
+    "expected_keywords": ["Ahab", "whale", "Pequod", "captain"]
+  },
+  {
+    "question": "What is the white whale in Moby Dick?",
+    "expected_source": "moby_dick.txt",
+    "expected_keywords": ["Moby", "Dick", "whale", "white"]
+  },
+  {
+    "question": "Who is Jean Valjean?",
+    "expected_source": "les_miserables.txt",
+    "expected_keywords": ["Valjean", "convict", "bishop", "Cosette"]
+  },
+  {
+    "question": "Who is Inspector Javert?",
+    "expected_source": "les_miserables.txt",
+    "expected_keywords": ["Javert", "police", "Valjean"]
+  },
+  {
+    "question": "Who is Edmond Dantes?",
+    "expected_source": "monte_cristo.txt",
+    "expected_keywords": ["Dantes", "Monte", "Cristo", "revenge"]
+  },
+  {
+    "question": "What is the Count of Monte Cristo about?",
+    "expected_source": "monte_cristo.txt",
+    "expected_keywords": ["Monte", "Cristo", "treasure", "revenge"]
+  },
+  {
+    "question": "Who is Don Quixote?",
+    "expected_source": "don_quixote.txt",
+    "expected_keywords": ["Quixote", "knight", "Sancho", "windmills"]
+  },
+  {
+    "question": "Who is Sancho Panza?",
+    "expected_source": "don_quixote.txt",
+    "expected_keywords": ["Sancho", "Panza", "squire", "Quixote"]
+  },
+  {
+    "question": "Who is Raskolnikov?",
+    "expected_source": "crime_punishment.txt",
+    "expected_keywords": ["Raskolnikov", "murder", "student"]
+  },
+  {
+    "question": "What crime does Raskolnikov commit?",
+    "expected_source": "crime_punishment.txt",
+    "expected_keywords": ["murder", "pawnbroker", "axe"]
+  },
+  {
+    "question": "Who is Pip in Great Expectations?",
+    "expected_source": "great_expectations.txt",
+    "expected_keywords": ["Pip", "expectations", "gentleman"]
+  },
+  {
+    "question": "Who is Miss Havisham?",
+    "expected_source": "great_expectations.txt",
+    "expected_keywords": ["Havisham", "wedding", "Estella"]
+  },
+  {
+    "question": "Who is Sydney Carton?",
+    "expected_source": "tale_two_cities.txt",
+    "expected_keywords": ["Carton", "Darnay", "guillotine"]
+  },
+  {
+    "question": "What happens during the French Revolution in Tale of Two Cities?",
+    "expected_source": "tale_two_cities.txt",
+    "expected_keywords": ["revolution", "Paris", "London", "guillotine"]
+  },
+  {
+    "question": "Who is David Copperfield?",
+    "expected_source": "david_copperfield.txt",
+    "expected_keywords": ["David", "Copperfield", "Peggotty"]
+  },
+  {
+    "question": "Who are the Karamazov brothers?",
+    "expected_source": "brothers_karamazov.txt",
+    "expected_keywords": ["Karamazov", "Dmitri", "Ivan", "Alyosha"]
+  },
+  {
+    "question": "Who is Hamlet?",
+    "expected_source": "shakespeare.txt",
+    "expected_keywords": ["Hamlet", "prince", "Denmark", "ghost"]
+  },
+  {
+    "question": "What is the fall of the Roman Empire?",
+    "expected_source": "roman_empire.txt",
+    "expected_keywords": ["Rome", "Roman", "empire", "fall", "decline"]
+  },
+  {
+    "question": "Who is Dorothea Brooke?",
+    "expected_source": "middlemarch.txt",
+    "expected_keywords": ["Dorothea", "Casaubon", "Middlemarch"]
+  }
+]
