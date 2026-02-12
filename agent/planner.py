@@ -243,13 +243,16 @@ Please plan this trip using the available tools."""
                 # Calculate cost
                 cost = calculate_cost(total_prompt_tokens, total_completion_tokens)
                 
-                # Log metrics
+                # Log and save metrics
                 metrics_store.log_agent_metrics(
                     task=prompt[:50],
                     success=True,
                     tool_calls=tool_calls_count,
                     cost=cost,
                 )
+                
+                from shared.config import METRICS_FILE
+                metrics_store.save_metrics(METRICS_FILE)
                 
                 return {
                     "success": True,
@@ -272,6 +275,9 @@ Please plan this trip using the available tools."""
             tool_calls=tool_calls_count,
             cost=cost,
         )
+        
+        from shared.config import METRICS_FILE
+        metrics_store.save_metrics(METRICS_FILE)
         
         return {
             "success": False,

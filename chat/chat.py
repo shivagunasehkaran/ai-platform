@@ -101,13 +101,17 @@ def chat_loop() -> None:
             stats = format_stats(prompt_tokens, completion_tokens, cost, timer.elapsed_ms)
             print(f"{stats}\n")
             
-            # Log metrics
+            # Log and save metrics immediately
             metrics_store.log_chat_metrics(
                 prompt_tokens=prompt_tokens,
                 completion_tokens=completion_tokens,
                 cost=cost,
                 latency_ms=timer.elapsed_ms,
             )
+            
+            # Save after each message to ensure persistence
+            from shared.config import METRICS_FILE
+            metrics_store.save_metrics(METRICS_FILE)
             
         except KeyboardInterrupt:
             print("\n\nInterrupted. Goodbye! 👋")

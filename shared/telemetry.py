@@ -163,20 +163,41 @@ class MetricsStore:
         logger.debug(f"Logged agent metrics: {entry}")
     
     def save_metrics(self, filepath: str | Path) -> None:
-        """Save all metrics to a JSON file.
+        """Save all metrics to a JSON file, merging with existing data.
         
         Args:
             filepath: Path to save the metrics file.
         """
         filepath = Path(filepath)
-        data = {
-            "chat_metrics": self.chat_metrics,
-            "retrieval_metrics": self.retrieval_metrics,
-            "agent_metrics": self.agent_metrics,
+        
+        # Load existing metrics first to merge
+        existing_data = {
+            "chat_metrics": [],
+            "retrieval_metrics": [],
+            "agent_metrics": [],
+        }
+        
+        if filepath.exists():
+            try:
+                with open(filepath, "r") as f:
+                    existing_data = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                pass  # Use empty if file is corrupted
+        
+        # Merge existing with new (append new entries)
+        merged_data = {
+            "chat_metrics": existing_data.get("chat_metrics", []) + self.chat_metrics,
+            "retrieval_metrics": existing_data.get("retrieval_metrics", []) + self.retrieval_metrics,
+            "agent_metrics": existing_data.get("agent_metrics", []) + self.agent_metrics,
         }
         
         with open(filepath, "w") as f:
-            json.dump(data, f, indent=2)
+            json.dump(merged_data, f, indent=2)
+        
+        # Clear current session metrics after saving to prevent duplicates
+        self.chat_metrics = []
+        self.retrieval_metrics = []
+        self.agent_metrics = []
         
         logger.info(f"Saved metrics to {filepath}")
     
