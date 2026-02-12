@@ -1,20 +1,7 @@
 version: "3.8"
 
 services:
-  cli:
-    build: .
-    container_name: ai-platform-cli
-    stdin_open: true
-    tty: true
-    env_file:
-      - .env
-    volumes:
-      - ./corpus:/app/corpus
-      - ./data:/app/data
-      - ./rag/data:/app/rag/data
-      - ./metrics.json:/app/metrics.json
-    command: python -m chat.chat
-
+  # RAG API Server (FastAPI + FAISS Vector DB)
   rag-api:
     build: .
     container_name: ai-platform-rag-api
@@ -23,7 +10,21 @@ services:
     env_file:
       - .env
     volumes:
-      - ./corpus:/app/corpus
-      - ./data:/app/data
       - ./rag/data:/app/rag/data
+      - ./metrics.json:/app/metrics.json
     command: uvicorn rag.api:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+
+  # Streamlit Dashboard
+  dashboard:
+    build: .
+    container_name: ai-platform-dashboard
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./metrics.json:/app/metrics.json
+      - ./rag/data:/app/rag/data
+    command: streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+    restart: unless-stopped
