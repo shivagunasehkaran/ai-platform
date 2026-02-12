@@ -241,6 +241,17 @@ All operations log to `metrics.json`:
 - RAG: retrieval latency, recall, MRR
 - Agent: success rate, tool calls, cost
 
+## Output screenshots
+<img width="2052" height="1355" alt="Screenshot 2026-02-12 at 11 50 27 PM" src="https://github.com/user-attachments/assets/aa90aa72-6829-4eed-8b28-686d09ddc349" />
+<img width="2050" height="1379" alt="Screenshot 2026-02-12 at 11 50 55 PM" src="https://github.com/user-attachments/assets/86c0d37d-a6cf-46af-8414-b1fe610027a1" />
+<img width="1695" height="1068" alt="Screenshot 2026-02-12 at 11 52 07 PM" src="https://github.com/user-attachments/assets/6448b795-9caa-40a9-a9fa-486e94bd536e" />
+<img width="1232" height="653" alt="Screenshot 2026-02-12 at 11 53 41 PM" src="https://github.com/user-attachments/assets/40307d67-0ebc-4a60-8f16-a5eece14e79c" />
+<img width="1375" height="1000" alt="Screenshot 2026-02-12 at 11 54 57 PM" src="https://github.com/user-attachments/assets/ddc1142f-e019-48de-84f9-aede0dfd6372" />
+<img width="1369" height="999" alt="Screenshot 2026-02-12 at 11 55 43 PM" src="https://github.com/user-attachments/assets/d81ed4f0-a26f-4124-89f5-942bc66ea730" />
+<img width="1367" height="1003" alt="Screenshot 2026-02-12 at 11 56 38 PM" src="https://github.com/user-attachments/assets/4326b6fe-81f9-47a5-9d7f-fc67be7e64d0" />
+<img width="1371" height="1004" alt="Screenshot 2026-02-12 at 11 57 54 PM" src="https://github.com/user-attachments/assets/1f5205c8-0838-40d6-92ce-55708ac455a2" />
+
+
 ## License
 
 Technical Assessment
