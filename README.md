@@ -1,4 +1,4 @@
-# AI Platform Assessment
+# AI Platform with agentic system
 
 A comprehensive AI platform demonstrating Chat, RAG, Agent, and Code Assistant capabilities using Azure-hosted GPT-4o.
 
@@ -250,8 +250,3 @@ All operations log to `metrics.json`:
 <img width="1369" height="999" alt="Screenshot 2026-02-12 at 11 55 43 PM" src="https://github.com/user-attachments/assets/d81ed4f0-a26f-4124-89f5-942bc66ea730" />
 <img width="1367" height="1003" alt="Screenshot 2026-02-12 at 11 56 38 PM" src="https://github.com/user-attachments/assets/4326b6fe-81f9-47a5-9d7f-fc67be7e64d0" />
 <img width="1371" height="1004" alt="Screenshot 2026-02-12 at 11 57 54 PM" src="https://github.com/user-attachments/assets/1f5205c8-0838-40d6-92ce-55708ac455a2" />
-
-
-## License
-
-Technical Assessment
